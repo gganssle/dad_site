@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Cars Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .car-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .car-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        .car-content {
+            padding: 25px;
+        }
+
+        .car-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .car-year {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .car-description {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .car-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .spec-badge {
+            background: #f7fafc;
+            color: #4a5568;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .cars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏁 Classic Cars Collection</h1>
+            <p>A showcase of timeless automotive excellence</p>
+        </header>
+
+        <div class="cars-grid">
+            <!-- 1965 Ford Mustang -->
+            <div class="car-card">
+                <div class="car-image">🏎️</div>
+                <div class="car-content">
+                    <h2 class="car-title">Ford Mustang</h2>
+                    <span class="car-year">1965</span>
+                    <p class="car-description">
+                        The original pony car that started it all. The 1965 Mustang revolutionized the automotive industry with its sporty design and affordable price, creating an entirely new market segment.
+                    </p>
+                    <div class="car-specs">
+                        <span class="spec-badge">V8 Engine</span>
+                        <span class="spec-badge">289 cu in</span>
+                        <span class="spec-badge">271 HP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1963 Chevrolet Corvette Sting Ray -->
+            <div class="car-card">
+                <div class="car-image">🚗</div>
+                <div class="car-content">
+                    <h2 class="car-title">Chevrolet Corvette Sting Ray</h2>
+                    <span class="car-year">1963</span>
+                    <p class="car-description">
+                        The iconic split-window coupe. This second-generation Corvette featured stunning styling and was the first to bear the Sting Ray name, making it one of the most collectible Corvettes ever made.
+                    </p>
+                    <div class="car-specs">
+                        <span class="spec-badge">V8 Engine</span>
+                        <span class="spec-badge">327 cu in</span>
+                        <span class="spec-badge">360 HP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1970 Dodge Charger -->
+            <div class="car-card">
+                <div class="car-image">🏁</div>
+                <div class="car-content">
+                    <h2 class="car-title">Dodge Charger R/T</h2>
+                    <span class="car-year">1970</span>
+                    <p class="car-description">
+                        Pure American muscle. The 1970 Charger R/T featured aggressive styling with its distinctive split grille and powerful HEMI engine options, becoming an icon of the muscle car era.
+                    </p>
+                    <div class="car-specs">
+                        <span class="spec-badge">HEMI V8</span>
+                        <span class="spec-badge">426 cu in</span>
+                        <span class="spec-badge">425 HP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1967 Shelby GT500 -->
+            <div class="car-card">
+                <div class="car-image">⚡</div>
+                <div class="car-content">
+                    <h2 class="car-title">Shelby GT500</h2>
+                    <span class="car-year">1967</span>
+                    <p class="car-description">
+                        Carroll Shelby's masterpiece. The GT500 took the Mustang platform and transformed it into a high-performance machine with racing pedigree and unmistakable style.
+                    </p>
+                    <div class="car-specs">
+                        <span class="spec-badge">V8 Engine</span>
+                        <span class="spec-badge">428 cu in</span>
+                        <span class="spec-badge">355 HP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1969 Chevrolet Camaro Z/28 -->
+            <div class="car-card">
+                <div class="car-image">🔥</div>
+                <div class="car-content">
+                    <h2 class="car-title">Chevrolet Camaro Z/28</h2>
+                    <span class="car-year">1969</span>
+                    <p class="car-description">
+                        Built for the track, loved on the street. The Z/28 was Chevrolet's answer to the Trans-Am racing series, featuring a high-revving small-block V8 and track-tuned suspension.
+                    </p>
+                    <div class="car-specs">
+                        <span class="spec-badge">V8 Engine</span>
+                        <span class="spec-badge">302 cu in</span>
+                        <span class="spec-badge">290 HP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1964 Pontiac GTO -->
+            <div class="car-card">
+                <div class="car-image">💨</div>
+                <div class="car-content">
+                    <h2 class="car-title">Pontiac GTO</h2>
+                    <span class="car-year">1964</span>
+                    <p class="car-description">
+                        The car that started the muscle car revolution. By dropping a big V8 into a mid-size body, Pontiac created the template that would define an entire era of American performance.
+                    </p>
+                    <div class="car-specs">
+                        <span class="spec-badge">V8 Engine</span>
+                        <span class="spec-badge">389 cu in</span>
+                        <span class="spec-badge">348 HP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Classic Cars Collection &copy; 2024 | Celebrating Automotive History</p>
+        </footer>
+    </div>
+</body>
+</html>
